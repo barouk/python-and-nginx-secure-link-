@@ -25,7 +25,7 @@ print(f"http://test.com{url}?st={str_hash}&e={expiry}")
 
 #--------------------------
 #nginx config
-
+#sudo apt install nginx-extras
 
 server {
     listen  80;
