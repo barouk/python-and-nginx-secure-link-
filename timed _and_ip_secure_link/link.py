@@ -12,7 +12,7 @@ url = "/y/xx.mp4"
 future = datetime.datetime.utcnow() + datetime.timedelta(minutes=5)
 expiry = calendar.timegm(future.timetuple())
 
-secure_link = f"{secret}{url}{expiry}".encode('utf-8')
+secure_link = f"{secret}{url}{expiry}{ip}".encode('utf-8')
 
 hash = hashlib.md5(secure_link).digest()
 base64_hash = base64.urlsafe_b64encode(hash)
